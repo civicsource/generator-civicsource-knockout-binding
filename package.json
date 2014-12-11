@@ -1,13 +1,13 @@
 {
   "name": "generator-civicsource-knockout-binding",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Yeoman generator for a knockout custom binding.",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "broline/generator-knockout-custom-binding",
+  "repository": "civicsource/generator-civicsource-knockout-binding",
   "author": {
-    "name": "Archon Information Systems",
-    "url": "https://github.com/Civicsource"
+    "name": "Civicsource",
+    "url": "https://github.com/civicsource/generator-civicsource-knockout-binding"
   },
   "engines": {
     "node": ">=0.10.0"
