@@ -1,8 +1,8 @@
-define(['knockout', 'jquery', './model',
+define(['knockout', 'jquery', 'lodash', './model',
         'knockout.punches',
         'template!./template/index.html!<%= model.name %>-main',
     ],
-    function(ko, $, ViewModel) {
+    function(ko, $, _, ViewModel) {
         
         ko.punches.enableAll();
 
@@ -11,6 +11,7 @@ define(['knockout', 'jquery', './model',
 
                 var value = ko.utils.unwrapObservable(valueAccessor());
                 element.model = new ViewModel();
+                element.model.instanceName = allBindings.get('id') || _.uniqueId("<%= model.name %>--");
                 ko.renderTemplate("<%= model.name %>-main", element.model, null, element, "replaceChildren");
 
             },
