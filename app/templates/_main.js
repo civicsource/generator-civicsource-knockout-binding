@@ -13,11 +13,13 @@ define(['knockout', 'jquery', 'lodash', './model',
                 element.model = new ViewModel();
                 element.model.instanceName = allBindings.get('id') || _.uniqueId("<%= model.name %>--");
                 ko.renderTemplate("<%= model.name %>-main", element.model, null, element, "replaceChildren");
-
+                return { controlsDescendantBindings: true };
             },
             update: function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
                 element.value = ko.utils.unwrapObservable(valueAccessor());
             }
         };
+
+        //ko.virtualElements.allowedBindings.<%= model.name %> = true;
     });
