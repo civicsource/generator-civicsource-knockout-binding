@@ -1,4 +1,4 @@
-define(["jquery", "knockout"],
+define(["jquery", "knockout", "../main"],
     function($, ko) {
         var viewModel = {
             value: ko.observable()

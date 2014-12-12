@@ -2,7 +2,7 @@
 
 var bowerPath = "../../../bower_components/";
 
-requirejs.config({
+require.config({
 	baseUrl: "./",
 	paths: {
 		"jquery": "https://code.jquery.com/jquery-1.10.1",
