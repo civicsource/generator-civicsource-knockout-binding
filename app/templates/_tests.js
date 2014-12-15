@@ -1,20 +1,20 @@
-define(['knockout', 'jquery',
+define(['knockout', 'jquery', './model',
         "./main"
     ],
-    function(ko, $) {
+    function(ko, $, ViewModel) {
 
         describe('<%= model.name %> binding', function() {
             var viewModel;
             var element;
             var root;
 
-            describe('when binging to an element', function() {
+            describe('when binding to an element', function() {
                 beforeEach(function() {
 
                     root = document.createElement('div');
-                    root.innerHTML = '<input id="input" data-bind="<%= model.name %>: obs">';
+                    root.innerHTML = '<div id="binding" data-bind="<%= model.name %>: obs"></div>';
                     document.body.appendChild(root);
-                    element = document.getElementById('input');
+                    element = document.getElementById('binding');
 
                     viewModel = {
                         obs: ko.observable()
