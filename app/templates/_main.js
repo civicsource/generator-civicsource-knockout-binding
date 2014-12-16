@@ -11,7 +11,7 @@ define(['knockout', 'jquery', 'lodash', './model',
 
                 var value = ko.utils.unwrapObservable(valueAccessor());
                 element.model = new ViewModel();
-                element.model.instanceName = allBindings.get('id') || _.uniqueId("<%= model.name %>--");
+                element.model.instanceName = allBindingsAccessor.get('id') || _.uniqueId("<%= model.name %>--");
                 ko.renderTemplate("<%= model.name %>-main", element.model, null, element, "replaceChildren");
                 return { controlsDescendantBindings: true };
             },
